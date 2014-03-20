@@ -1,0 +1,78 @@
+JNI					Java
+jboolean			boolean
+jbyte				byte
+jchar				char
+jshort				short
+jint				int
+jfloat				float
+jdouble				double
+jstring				String
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+UTF-8
+const jbyte* GetStringUTFChars(JNIEnv *env, jstring string, jboolean isCopy);
+void ReleaseStringUTFChars(JNIEnv *env, jstring string, const jchar *chars_buffer);
+jstring GetStringUTFRegion(JNIEnv *env, jstring string, jint start, jint end, const jchar *chars_buffer);
+jsize GetStringUTFLength(JNIEnv, jstring);
+jstring NewStringUTF(JNIEnv, const char*);
+----------------------------------------------------------------------------------------------------
+Unicode
+const jbyte* GetStringChars(JNIEnv *env, jstring string, jboolean isCopy);
+void ReleaseStringChars(JNIEnv *env, jstring string, const jchar *chars_buffer);
+jstring GetStringRegion(JNIEnv *env, jstring string, jint start, jint end, const jchar *chars_buffer);
+jsize GetStringLength(JNIEnv, jstring);
+jstring NewString(JNIEnv, const char*);
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+Arrays
+jbooleanArray
+jbyteArray
+jcharArray
+jshortArray
+jintArray
+jlongArray
+jfloatArray
+jdoubleArray
+*** jobjectArray
+
+Operaciones
+jsize GetArrayLength(JNIEnv*, arrayJNI);
+tipoJNI* Get<Tipo>ArrayElements(JNIEnv*, tipoArrayJNI*,  jboolean *isCopy);
+Ej:    jint* GetIntArrayElements(JNIEnv *env, jintArray* array, jboolean *isCopy);
+
+isCopy->Puntero al array original o copia
+void Relase<Tipo>ArrayElements(JNIEnv*, tipoArrayJNI* , arrayC*, jint mode);
+mode=>0 copia el contenido del array C en array Java y libera array C.
+	JNI_COMMIT: Igual que 0, pero no libera array C
+	JNI_ABORT: Libera array C. No copia en Java
+-------------------------------------------------
+
+
+
+
+Arrays de referencias "jobjectArray"
+
+jobject GetObjectArrayElement(JNIEnv *env, jobjectArray array, jsize index);
+void SetObjectArrayElement(JNIEnv *env, jobjectArray array, jsize index, jobject value);
+jarray NewObjectArray(JNIEnv *env, jsize length, jclass elementType, jobject initalElement);
+initialElement valor inicial al que se inician todos los elementos del array, puede ser NULL
+elementType indica la clase a la que pertenecen los elementos, 
+jclass FindClass(JNIEnv* env, const char* name);
+"java/lang/String"
+"java/lang/Integer"
+....
+
+void DeleteLocalRef(JNIEnv* env, jobject ref);
+
+
+
+
+
+-------------------------------------------
+-------------------------------------------
+ACCESO A ATRIBUTOS DE INSTANCIA
+
+
+
+
+

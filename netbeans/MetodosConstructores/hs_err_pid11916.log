@@ -1,0 +1,235 @@
+#
+# An unexpected error has been detected by HotSpot Virtual Machine:
+#
+#  SIGSEGV (0xb) at pc=0xb25fbd70, pid=11916, tid=3084808320
+#
+# Java VM: Java HotSpot(TM) Client VM (1.5.0_09-b03 mixed mode)
+# Problematic frame:
+# j  java.lang.String.<init>(Ljava/lang/String;)V+1
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0805d0a0):  JavaThread "main" [_thread_in_Java, id=11916]
+
+siginfo:si_signo=11, si_errno=0, si_code=1, si_addr=0x616c6f48
+
+Registers:
+EAX=0x3800000e, EBX=0x00000010, ECX=0x616c6f48, EDX=0x00000000
+ESP=0xbfa4ee90, EBP=0xbfa4eeac, ESI=0xae567c9d, EDI=0xbfa4eec4
+EIP=0xb25fbd70, CR2=0x616c6f48, EFLAGS=0x00010246
+
+Top of Stack: (sp=0xbfa4ee90)
+0xbfa4ee90:   bfa4ee90 ae567c99 bfa4eec4 ae5cbe30
+0xbfa4eea0:   00000000 ae567ce8 bfa4eec0 bfa4eeec
+0xbfa4eeb0:   b25edb3b 00000000 00000000 00000000
+0xbfa4eec0:   616c6f48 aa58f3d8 aa58f3d8 aa58f3c0
+0xbfa4eed0:   bfa4eed0 ae6c8ff2 bfa4ef00 ae6c9478
+0xbfa4eee0:   00000000 ae6c9040 bfa4eef4 bfa4ef14
+0xbfa4eef0:   b25eb217 00000002 00000001 616c6f48
+0xbfa4ef00:   aa58f3c0 00000001 b79cdaec 0805d0a0 
+
+Instructions: (pc=0xb25fbd70)
+0xb25fbd60:   01 8b 4d f0 c1 e2 02 8b 5c 91 18 8b 44 91 1c 59
+0xb25fbd70:   3b 01 c1 e8 1c 83 e0 0f 0f 85 0a 00 00 00 0f be 
+
+Stack: [0xbf852000,0xbfa52000),  sp=0xbfa4ee90,  free space=2035k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+j  java.lang.String.<init>(Ljava/lang/String;)V+1
+j  metodosconstructores.Main.<init>(Ljava/lang/String;II)V+10
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x17a75c]
+V  [libjvm.so+0x28afd8]
+V  [libjvm.so+0x17a58f]
+V  [libjvm.so+0x1a50e3]
+V  [libjvm.so+0x185a7c]
+C  [libMetodosConstructores.so+0x8d5]  Java_metodosconstructores_Main_Constructores+0xf1
+j  metodosconstructores.Main.Constructores()V+0
+j  metodosconstructores.Main.main([Ljava/lang/String;)V+0
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x17a75c]
+V  [libjvm.so+0x28afd8]
+V  [libjvm.so+0x17a58f]
+V  [libjvm.so+0x1a4e32]
+V  [libjvm.so+0x196042]
+C  [java+0x1873]
+C  [libc.so.6+0x15974]  __libc_start_main+0xf4
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x080d3378 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=11931]
+  0x080d1cb0 JavaThread "CompilerThread0" daemon [_thread_in_vm, id=11930]
+  0x080d0b30 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=11929]
+  0x080cf028 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=11927]
+  0x080cdb38 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=11926]
+  0x080cc008 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=11925]
+  0x080bc358 JavaThread "Finalizer" daemon [_thread_blocked, id=11922]
+  0x080bb728 JavaThread "Reference Handler" daemon [_thread_blocked, id=11921]
+=>0x0805d0a0 JavaThread "main" [_thread_in_Java, id=11916]
+
+Other Threads:
+  0x080b8a70 VMThread [id=11920]
+  0x080d47f8 WatcherThread [id=11932]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 576K, used 192K [0xaa560000, 0xaa600000, 0xaaa40000)
+  eden space 512K,  37% used [0xaa560000, 0xaa590028, 0xaa5e0000)
+  from space 64K,   0% used [0xaa5e0000, 0xaa5e0000, 0xaa5f0000)
+  to   space 64K,   0% used [0xaa5f0000, 0xaa5f0000, 0xaa600000)
+ tenured generation   total 1408K, used 0K [0xaaa40000, 0xaaba0000, 0xae560000)
+   the space 1408K,   0% used [0xaaa40000, 0xaaa40000, 0xaaa40200, 0xaaba0000)
+ compacting perm gen  total 8192K, used 1445K [0xae560000, 0xaed60000, 0xb2560000)
+   the space 8192K,  17% used [0xae560000, 0xae6c95e8, 0xae6c9600, 0xaed60000)
+No shared spaces configured.
+
+Dynamic libraries:
+08048000-08057000 r-xp 00000000 03:03 264062     /opt/jdk1.5.0_09/jre/bin/java
+08057000-08059000 rwxp 0000e000 03:03 264062     /opt/jdk1.5.0_09/jre/bin/java
+08059000-081c6000 rwxp 08059000 00:00 0          [heap]
+a9c00000-a9c21000 rwxp a9c00000 00:00 0 
+a9c21000-a9d00000 ---p a9c21000 00:00 0 
+a9e00000-a9e2b000 r-xs 00000000 03:03 295505     /opt/jdk1.5.0_09/jre/lib/ext/sunpkcs11.jar
+a9e2b000-a9e2d000 r-xs 00000000 03:03 295506     /opt/jdk1.5.0_09/jre/lib/ext/dnsns.jar
+a9e2d000-a9e54000 r-xs 00000000 03:03 295504     /opt/jdk1.5.0_09/jre/lib/ext/sunjce_provider.jar
+a9e54000-a9f18000 r-xs 00000000 03:03 296079     /opt/jdk1.5.0_09/jre/lib/ext/localedata.jar
+a9f18000-a9f19000 ---p a9f18000 00:00 0 
+a9f19000-a9f98000 rwxp a9f19000 00:00 0 
+a9f98000-a9f9b000 ---p a9f98000 00:00 0 
+a9f9b000-aa018000 rwxp a9f9b000 00:00 0 
+aa018000-aa01b000 ---p aa018000 00:00 0 
+aa01b000-aa098000 rwxp aa01b000 00:00 0 
+aa098000-aa09b000 ---p aa098000 00:00 0 
+aa09b000-aa118000 rwxp aa09b000 00:00 0 
+aa118000-aa11b000 ---p aa118000 00:00 0 
+aa11b000-aa198000 rwxp aa11b000 00:00 0 
+aa198000-aa19b000 ---p aa198000 00:00 0 
+aa19b000-aa218000 rwxp aa19b000 00:00 0 
+aa218000-aa21b000 ---p aa218000 00:00 0 
+aa21b000-aa298000 rwxp aa21b000 00:00 0 
+aa298000-aa360000 r-xp 00000000 03:03 395062     /usr/lib/locale/locale-archive
+aa360000-aa363000 ---p aa360000 00:00 0 
+aa363000-aa3e0000 rwxp aa363000 00:00 0 
+aa3e0000-aa3e3000 ---p aa3e0000 00:00 0 
+aa3e3000-aa460000 rwxp aa3e3000 00:00 0 
+aa460000-aa461000 ---p aa460000 00:00 0 
+aa461000-aa4e5000 rwxp aa461000 00:00 0 
+aa4e5000-aa501000 rwxp aa4e5000 00:00 0 
+aa501000-aa502000 rwxp aa501000 00:00 0 
+aa502000-aa51f000 rwxp aa502000 00:00 0 
+aa51f000-aa520000 rwxp aa51f000 00:00 0 
+aa520000-aa521000 rwxp aa520000 00:00 0 
+aa521000-aa523000 rwxp aa521000 00:00 0 
+aa523000-aa53f000 rwxp aa523000 00:00 0 
+aa53f000-aa543000 rwxp aa53f000 00:00 0 
+aa543000-aa55f000 rwxp aa543000 00:00 0 
+aa55f000-aa600000 rwxp aa55f000 00:00 0 
+aa600000-aaa40000 rwxp aa600000 00:00 0 
+aaa40000-aaba0000 rwxp aaa40000 00:00 0 
+aaba0000-ae560000 rwxp aaba0000 00:00 0 
+ae560000-aed60000 rwxp ae560000 00:00 0 
+aed60000-b2560000 rwxp aed60000 00:00 0 
+b2566000-b256a000 r-xp 00000000 03:03 264117     /opt/jdk1.5.0_09/jre/lib/i386/libdt_socket.so
+b256a000-b256b000 rwxp 00003000 03:03 264117     /opt/jdk1.5.0_09/jre/lib/i386/libdt_socket.so
+b256b000-b256e000 rwxp b256b000 00:00 0 
+b256e000-b25eb000 rwxp b256e000 00:00 0 
+b25eb000-b267b000 rwxp b25eb000 00:00 0 
+b267b000-b45eb000 rwxp b267b000 00:00 0 
+b45eb000-b4e5b000 r-xs 00000000 03:03 264159     /opt/jdk1.5.0_09/jre/lib/charsets.jar
+b4e5b000-b4e70000 r-xs 00000000 03:03 264123     /opt/jdk1.5.0_09/jre/lib/jce.jar
+b4e70000-b4ef5000 r-xs 00000000 03:03 264156     /opt/jdk1.5.0_09/jre/lib/jsse.jar
+b4ef5000-b4f5e000 rwxp b4ef5000 00:00 0 
+b4f5e000-b7574000 r-xs 00000000 03:03 264058     /opt/jdk1.5.0_09/jre/lib/rt.jar
+b7574000-b7583000 r-xp 00000000 03:03 264093     /opt/jdk1.5.0_09/jre/lib/i386/libzip.so
+b7583000-b7585000 rwxp 0000e000 03:03 264093     /opt/jdk1.5.0_09/jre/lib/i386/libzip.so
+b7585000-b75a6000 r-xp 00000000 03:03 264091     /opt/jdk1.5.0_09/jre/lib/i386/libjava.so
+b75a6000-b75a8000 rwxp 00020000 03:03 264091     /opt/jdk1.5.0_09/jre/lib/i386/libjava.so
+b75a8000-b75b3000 r-xp 00000000 03:03 264090     /opt/jdk1.5.0_09/jre/lib/i386/libverify.so
+b75b3000-b75b4000 rwxp 0000b000 03:03 264090     /opt/jdk1.5.0_09/jre/lib/i386/libverify.so
+b75b4000-b75bd000 r-xp 00000000 03:03 1692967    /lib/tls/libnss_files-2.3.2.so
+b75bd000-b75be000 rwxp 00008000 03:03 1692967    /lib/tls/libnss_files-2.3.2.so
+b75be000-b75c6000 r-xp 00000000 03:03 1692969    /lib/tls/libnss_nis-2.3.2.so
+b75c6000-b75c7000 rwxp 00007000 03:03 1692969    /lib/tls/libnss_nis-2.3.2.so
+b75c7000-b75ce000 r-xp 00000000 03:03 1692965    /lib/tls/libnss_compat-2.3.2.so
+b75ce000-b75cf000 rwxp 00006000 03:03 1692965    /lib/tls/libnss_compat-2.3.2.so
+b75cf000-b7601000 r-xp 00000000 03:03 264116     /opt/jdk1.5.0_09/jre/lib/i386/libjdwp.so
+b7601000-b7602000 rwxp 00032000 03:03 264116     /opt/jdk1.5.0_09/jre/lib/i386/libjdwp.so
+b7602000-b7605000 rwxp b7602000 00:00 0 
+b7605000-b7616000 r-xp 00000000 03:03 1692964    /lib/tls/libnsl-2.3.2.so
+b7616000-b7617000 rwxp 00011000 03:03 1692964    /lib/tls/libnsl-2.3.2.so
+b7617000-b7619000 rwxp b7617000 00:00 0 
+b761b000-b761c000 rwxp b761b000 00:00 0 
+b761c000-b7624000 rwxs 00000000 03:03 1543247    /tmp/hsperfdata_javi/11916
+b7624000-b7645000 r-xp 00000000 03:03 1692962    /lib/tls/libm-2.3.2.so
+b7645000-b7646000 rwxp 00020000 03:03 1692962    /lib/tls/libm-2.3.2.so
+b7646000-b79b2000 r-xp 00000000 03:03 295494     /opt/jdk1.5.0_09/jre/lib/i386/client/libjvm.so
+b79b2000-b79d1000 rwxp 0036b000 03:03 295494     /opt/jdk1.5.0_09/jre/lib/i386/client/libjvm.so
+b79d1000-b7de8000 rwxp b79d1000 00:00 0 
+b7de8000-b7f12000 r-xp 00000000 03:03 1692959    /lib/tls/libc-2.3.2.so
+b7f12000-b7f1b000 rwxp 00129000 03:03 1692959    /lib/tls/libc-2.3.2.so
+b7f1b000-b7f1d000 rwxp b7f1b000 00:00 0 
+b7f1d000-b7f1f000 r-xp 00000000 03:03 1692961    /lib/tls/libdl-2.3.2.so
+b7f1f000-b7f20000 rwxp 00002000 03:03 1692961    /lib/tls/libdl-2.3.2.so
+b7f20000-b7f21000 rwxp b7f20000 00:00 0 
+b7f21000-b7f2d000 r-xp 00000000 03:03 1692955    /lib/tls/libpthread-0.60.so
+b7f2d000-b7f2e000 rwxp 0000c000 03:03 1692955    /lib/tls/libpthread-0.60.so
+b7f2e000-b7f30000 rwxp b7f2e000 00:00 0 
+b7f30000-b7f31000 r-xp 00000000 03:03 1133090    /home/javi/cursojni/eclipse/MetodosConstructores/Debug/libMetodosConstructores.so
+b7f31000-b7f32000 rwxp 00000000 03:03 1133090    /home/javi/cursojni/eclipse/MetodosConstructores/Debug/libMetodosConstructores.so
+b7f32000-b7f38000 r-xp 00000000 03:03 264082     /opt/jdk1.5.0_09/jre/lib/i386/native_threads/libhpi.so
+b7f38000-b7f39000 rwxp 00006000 03:03 264082     /opt/jdk1.5.0_09/jre/lib/i386/native_threads/libhpi.so
+b7f39000-b7f3a000 rwxp b7f39000 00:00 0 
+b7f3a000-b7f3b000 r-xp b7f3a000 00:00 0 
+b7f3b000-b7f3c000 rwxp b7f3b000 00:00 0 
+b7f3c000-b7f52000 r-xp 00000000 03:03 1692920    /lib/ld-2.3.2.so
+b7f52000-b7f53000 rwxp 00015000 03:03 1692920    /lib/ld-2.3.2.so
+bf852000-bf855000 ---p bf852000 00:00 0 
+bf855000-bfa52000 rwxp bf855000 00:00 0          [stack]
+ffffe000-fffff000 ---p 00000000 00:00 0          [vdso]
+
+VM Arguments:
+jvm_args: -Xdebug -Xnoagent -Djava.compiler=none -Xrunjdwp:transport=dt_socket,address=localhost:59442 -Djava.library.path=/home/javi/cursojni/eclipse/MetodosConstructores/Debug
+java_command: metodosconstructores.Main
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games
+USERNAME=javi
+LD_LIBRARY_PATH=/opt/jdk1.5.0_09/jre/lib/i386/client:/opt/jdk1.5.0_09/jre/lib/i386:/opt/jdk1.5.0_09/jre/../lib/i386
+SHELL=/bin/bash
+DISPLAY=:0.0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x325bd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x325bd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x28a010], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x28a010], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x28a010], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x28c460], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x28be90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x28be90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x28be90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x28be90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:gnulinex2006 rc1
+
+uname:Linux 2.6.16-2-586 #1 PREEMPT Fri May 5 13:19:05 CEST 2006 i686
+libc:glibc 2.3.2 NPTL 0.60 
+rlimit: STACK 8192k, CORE 0k, NPROC infinity, NOFILE 1024, AS infinity
+load average:0.30 0.11 0.10
+
+CPU:total 1 (cores per cpu 1, threads per core 1) family 6 model 13 stepping 8, cmov, cx8, fxsr, mmx, sse, sse2
+
+Memory: 4k page, physical 1034932k(16508k free), swap 714852k(714788k free)
+
+vm_info: Java HotSpot(TM) Client VM (1.5.0_09-b03) for linux-x86, built on Oct 12 2006 10:54:08 by java_re with gcc 3.2.1-7a (J2SE release)
+

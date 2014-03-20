@@ -1,0 +1,11 @@
+#ifndef QATRISIM_H_
+#define QATRISIM_H_
+
+#include <jni.h>
+#define USER_CLASSPATH "."
+#include <dlfcn.h>
+
+typedef jint (JNICALL *FN)(JavaVM **pvm, void **penv, void *args);
+
+   
+#endif /*QATRISIM_H_*/

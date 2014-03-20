@@ -1,0 +1,17 @@
+#include "cadenas2.h"
+
+JNIEXPORT void JNICALL Java_cadenas2_Main_ModificaCadena
+  (JNIEnv *env, jobject obj)
+  {
+  		jobjectClass clase = (*env)->GetObjectClass(env, obj);
+		jclass claseCampo = (*env)->FindClass(env, "Ljava/lang/String;");
+		jfieldID campoCadena = (*env)->GetFieldID(env, obj, "cadena", "Ljava/lang/String;");
+		/*
+		 * jstring cadena = (jstring) (*env)->GetObjectField(env, obj, campoCadena);
+		const jbyte* cadenaC = (*env)->GetStringUTFChars(env, cadena, NULL);
+		printf("La cadena es %s\n", cadenaC);
+		(*env)->ReleaseStringUTFChars(env, cadena, cadenaC);
+		*/
+  }
+
+  

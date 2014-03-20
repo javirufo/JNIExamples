@@ -1,0 +1,3 @@
+#Thu Nov 23 10:19:32 CET 2006
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8"?>\n<watchExpressions>\n<expression enabled\="true" text\="argv"/>\n</watchExpressions>\n
+eclipse.preferences.version=1

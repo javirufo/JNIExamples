@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libraryInfos>
+<libraryInfo home="C:\Archivos de programa\Java\jre1.5.0_09" version="1.5.0_09">
+<bootpath>
+<entry path="C:\Archivos de programa\Java\jre1.5.0_09\lib\rt.jar"/>
+<entry path="C:\Archivos de programa\Java\jre1.5.0_09\lib\i18n.jar"/>
+<entry path="C:\Archivos de programa\Java\jre1.5.0_09\lib\sunrsasign.jar"/>
+<entry path="C:\Archivos de programa\Java\jre1.5.0_09\lib\jsse.jar"/>
+<entry path="C:\Archivos de programa\Java\jre1.5.0_09\lib\jce.jar"/>
+<entry path="C:\Archivos de programa\Java\jre1.5.0_09\lib\charsets.jar"/>
+<entry path="C:\Archivos de programa\Java\jre1.5.0_09\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Archivos de programa\Java\jre1.5.0_09\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Archivos de programa\Java\jre1.5.0_09\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="/opt/jdk1.5.0_09" version="1.5.0_09">
+<bootpath>
+<entry path="/opt/jdk1.5.0_09/jre/lib/rt.jar"/>
+<entry path="/opt/jdk1.5.0_09/jre/lib/i18n.jar"/>
+<entry path="/opt/jdk1.5.0_09/jre/lib/sunrsasign.jar"/>
+<entry path="/opt/jdk1.5.0_09/jre/lib/jsse.jar"/>
+<entry path="/opt/jdk1.5.0_09/jre/lib/jce.jar"/>
+<entry path="/opt/jdk1.5.0_09/jre/lib/charsets.jar"/>
+<entry path="/opt/jdk1.5.0_09/jre/classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="/opt/jdk1.5.0_09/jre/lib/ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="/opt/jdk1.5.0_09/jre/lib/endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="/opt/jdk1.5.0_09/jre" version="1.5.0_09">
+<bootpath>
+<entry path="/opt/jdk1.5.0_09/jre/lib/rt.jar"/>
+<entry path="/opt/jdk1.5.0_09/jre/lib/i18n.jar"/>
+<entry path="/opt/jdk1.5.0_09/jre/lib/sunrsasign.jar"/>
+<entry path="/opt/jdk1.5.0_09/jre/lib/jsse.jar"/>
+<entry path="/opt/jdk1.5.0_09/jre/lib/jce.jar"/>
+<entry path="/opt/jdk1.5.0_09/jre/lib/charsets.jar"/>
+<entry path="/opt/jdk1.5.0_09/jre/classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="/opt/jdk1.5.0_09/jre/lib/ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="/opt/jdk1.5.0_09/jre/lib/endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

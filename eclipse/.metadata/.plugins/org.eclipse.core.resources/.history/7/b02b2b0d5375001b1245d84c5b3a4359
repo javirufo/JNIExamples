@@ -1,0 +1,9 @@
+#include "cadenas2.h"
+
+JNIEXPORT void JNICALL Java_cadenas2_Main_ModificaCadena
+  (JNIEnv *env, jobject obj)
+  {
+		jclass claseCampo = (*env)->FindClass(env, "Ljava/lang/String;");
+		jfieldID campoCadena = (*env)->GetFieldID(env, claseCampo, "cadena", "Ljava/lang/String;");
+		
+  }

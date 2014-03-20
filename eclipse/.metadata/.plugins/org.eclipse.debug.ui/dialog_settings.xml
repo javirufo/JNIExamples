@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="EXT_FOLDER_LAST_PATH_SETTING" value="/home/javi/cursojni/netbeans/HolaMundoJNI/build/classes/holamundojni"/>
+	<item key="EXT_FOLDER_LAST_SUBDIR_SETTING" value="true"/>
+	<section name="org.eclipse.debug.ui.LAUNCH_CONFIGURATIONS_DIALOG_SECTION">
+		<item key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_1" value="321"/>
+		<item key="DIALOG_X_ORIGIN" value="112"/>
+		<item key="DIALOG_HEIGHT" value="644"/>
+		<item key="DIALOG_FONT_NAME" value="1|Sans|10|0|GTK|1|"/>
+		<item key="org.eclipse.debug.ui.EXPANDED_NODES" value=", org.eclipse.jdt.launching.localJavaApplication, org.eclipse.jdt.launching.remoteJavaApplication, org.eclipse.cdt.launch.localCLaunch, "/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="808"/>
+		<item key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_2" value="678"/>
+	</section>
+</section>

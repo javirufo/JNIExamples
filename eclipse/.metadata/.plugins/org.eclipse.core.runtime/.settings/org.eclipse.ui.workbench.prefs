@@ -1,0 +1,5 @@
+#Thu Nov 23 16:50:03 CET 2006
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.cdt.ui.presentation\tTorg.eclipse.cdt.ui.CEditor.presentation
+org.eclipse.cdt.ui.editors.textfont=1|Verdana|12|0|GTK|1|;
+eclipse.preferences.version=1
+ColorsAndFontsPreferencePage.selectedElement=Forg.eclipse.cdt.ui.editors.textfont
